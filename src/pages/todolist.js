@@ -18,7 +18,7 @@ const Todolist = () => {
       <div className="todos_wrapper">
         <div>
           <div className="center">
-            <h1>Todo-List</h1>
+            <h1>Todo List</h1>
           </div>
         </div>
         <div>
