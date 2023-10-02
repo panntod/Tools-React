@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+  }
+
+  .contact{
+    background: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .contact-container{
+    margin-top: 7rem;
+    background: var(--text-color);
+    padding: 2rem;
+    min-height: 40rem;
+  }
+
+  .section-title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .px-m{
+    padding: 0 3rem 0 0;
+  }
+
+  .form-group{
+    padding: .4rem 0;
+  }
+
+  .form-control{
+    background: transparent;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: .2rem;
+    width: 100%;
+  }
+
+  .form-shadow {
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.6); /* Bayangan hanya di bagian kanan */
+  }
+
+  .contact-btn{
+    color: white;
+    background: var(--main-color);
+    padding: .8rem;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  .contact-btn:hover{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background: white;
+    cursor: pointer;
+  }
+
+  .side-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30rem;
+    max-width: 13rem;
+  }
+
+  .contact-sosmed{
+    width: 100%;
+    gap: 10px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-sosmed a i{
+    font-size: 2rem;
+    color: var(--main-color);
+  }
+
+  .contact-sosmed a i:hover{
+    transform: translateY(10px);
+  }

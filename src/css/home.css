@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+
+.home{
+    gap: 5rem;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  color: var(--text-color);
+  font-size: 3rem;
+}
+
+.home-content p{
+    color: var(--text-color);
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
+
+.img-container img {
+  width: 250px;
+  height: auto;
+}
