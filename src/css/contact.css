@@ -19,7 +19,7 @@
   }
 
   .contact-container{
-    margin-top: 7rem;
+    margin: 7rem 0;
     background: var(--text-color);
     padding: 2rem;
     min-height: 40rem;

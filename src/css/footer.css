@@ -1,0 +1,29 @@
+.footer {
+    margin-top: 0.5rem;
+    background-color: #fff;
+    text-align: center;
+    font-weight: 1rem;
+    padding: 2rem 0;
+  }
+  
+  .footer-title {
+    color: #212121;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-subtitle {
+    color: #212121;
+    font-size: 0.8rem;
+    margin: 0 2rem;
+  }
+  
+  .footer-social i {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+  }
+  
+  .footer-copy {
+    font-size: 0.8rem;
+  }

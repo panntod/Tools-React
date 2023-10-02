@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+
+.page_404 {
+  padding: 40px 0;
+  background: linear-gradient(to right bottom, var(--bg-color), var(--second-bg-color));
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page_404 h1 {
+  font-size: 130px;
+  color: var(--text-color);
+}
+
+.page_404 h3 {
+  font-size: 80px;
+  color: var(--text-color);
+}
+
+
