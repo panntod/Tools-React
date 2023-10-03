@@ -28,14 +28,14 @@ function Note() {
 
   function getRandomColor() {
     const colors = [
-      "bg-pink-200",
-      "bg-purple-200",
-      "bg-blue-200",
-      "bg-green-200",
-      "bg-yellow-200",
-      "bg-red-200",
-      "bg-indigo-200",
-      "bg-gray-200",
+      "bg-pink",
+      "bg-purple",
+      "bg-blue",
+      "bg-green",
+      "bg-yellow",
+      "bg-red",
+      "bg-indigo",
+      "bg-gray",
     ];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
@@ -66,19 +66,19 @@ function Note() {
             clicking the red button below.
           </p>
           <div>
-            <button className="button" onClick={() => addNote()}>
+            <button className="button bg-green" onClick={() => addNote()}>
               <i className="fa fa-solid fa-plus button-font">
                 <p>New Note</p>
               </i>
             </button>
-            <button className="button" onClick={() => clearAll()}>
+            <button className="button bg-red" onClick={() => clearAll()}>
               <i className="fa fa-solid fa-trash button-font">
                 <p>Clear Notes</p>
               </i>
             </button>
           </div>
         </div>
-        <div className="table-note">
+        <div>
           <div className="notes">
             <h1>Note List</h1>
           </div>
@@ -87,10 +87,11 @@ function Note() {
           ) : (
             <div>
               {notes.map((note, index) => (
-                <div key={index} className={`${note.color} `}>
+                <div key={index} className={`${note.color} `} style={{borderRadius: 6+"px", padding: .4+"rem", marginBottom: 10+"px"}}>
                   <div className="form-note">
                     <textarea
                       value={note.text}
+                      className="textarea-notes"
                       onChange={(e) => {
                         const updatedNotes = [...notes];
                         updatedNotes[index].text = e.target.value;
@@ -98,20 +99,12 @@ function Note() {
                         adjustTextareaHeight(e, index);
                       }}
                       placeholder="Write your note here..."
-                      style={{
-                        height: "auto",
-                        minHeight: "50px",
-                        maxHeight: "300px",
-                        resize: "vertical",
-                        width: '35rem',
-                        fontFamily: "Poppins, sans-serif",
-                      }}
                     ></textarea>
-                  </div>
-                  <div>
-                    <button onClick={() => deleteNote(index)}>
-                      <i className="fa fa-solid fa-trash"></i>
-                    </button>
+                    <div>
+                      <button onClick={() => deleteNote(index)} className="button-delete-note">
+                        <i className="fa fa-solid fa-trash"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}

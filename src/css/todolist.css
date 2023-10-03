@@ -72,7 +72,8 @@
   
   .list_item {
     display: flex;
-    margin: 20px 0;
+    justify-content: space-between;
+    margin: 20px 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
@@ -116,13 +117,12 @@
   }
   
   .list {
-    width: 220px;
+    width: 260px;
     background-color: #12343b;
     border: none;
     color: #ccc;
     font-size: 20px;
-    padding-left: 15px;
-    margin-right: 15px;
+    padding-left: 1rem;
   }
   
   input:focus,
