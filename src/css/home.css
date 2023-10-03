@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html{
+  scroll-padding-top: 8rem;
+}
+
 :root {
   --bg-color: #081b29;
   --second-bg-color: #112e42;
@@ -40,4 +44,10 @@
 .img-container img {
   width: 250px;
   height: auto;
+}
+
+.section-header{
+  background: var(--second-bg-color);
+  text-align: center;
+  padding: 3rem;
 }

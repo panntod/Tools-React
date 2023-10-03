@@ -19,7 +19,7 @@
   }
 
   .contact-container{
-    margin: 7rem 0;
+    margin-bottom: 7rem;
     background: var(--text-color);
     padding: 2rem;
     min-height: 40rem;
@@ -72,6 +72,10 @@
     justify-content: center;
     min-height: 30rem;
     max-width: 13rem;
+  }
+
+  .side-text h1{
+    color: #000;
   }
 
   .contact-sosmed{

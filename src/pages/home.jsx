@@ -27,6 +27,7 @@ const Home = () => {
           />
         </div>
       </section>
+      <h1 className="section-header">Contact Me</h1>
       <section className="contact" id="contact">
         <Contact />
       </section>
