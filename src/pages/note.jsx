@@ -58,8 +58,8 @@ function Note() {
     <div className="container" style={{ minHeight: "90vh" }}>
       <div className="note-container">
         <div className="notes">
-          <h1>Notes</h1>
-          <p>
+          <h1 className="text-2xl font-bold mb-4">Notes</h1>
+          <p className="text-lg">
             You can add notes by clicking this green button, the notes will
             automaticly saved. You can also delete the notes one by one by
             clicking the trash icon in each note or just clear all the notes by
@@ -80,7 +80,7 @@ function Note() {
         </div>
         <div>
           <div className="notes">
-            <h1>Note List</h1>
+            <h1 className="text-2xl font-bold mb-4">Note List</h1>
           </div>
           {notes.length === 0 ? (
             <p className="notes">Tidak ada data</p>

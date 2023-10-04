@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <section className="container home">
         <div className="home-content">
-          <h1 className="h1">About This Content</h1>
+          <h1 className="text-2xl font-bold mb-4 text-black dark:text-white">About This Content</h1>
           <div>
             <p>
               This is a simple tools project made with React.js. There are 3
@@ -27,7 +27,7 @@ const Home = () => {
           />
         </div>
       </section>
-      <h1 className="section-header">Contact Me</h1>
+      <h1 className="section-header text-5xl font-bold">Contact Me</h1>
       <section className="contact" id="contact">
         <Contact />
       </section>
