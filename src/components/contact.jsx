@@ -90,7 +90,7 @@ const Contact = () => {
 
       <div className="contact-container">
         <div className="side-contact">
-          <h1 className="side-text">Let's Talk About Everything.</h1>
+          <h1 className="side-text text-2xl font-semibold text-black">Let's Talk About Everything.</h1>
           <div className="contact-sosmed">
             <a href="https://www.facebook.com/pandhu.munjalindra" >
               <i className="fa fa-facebook"></i>

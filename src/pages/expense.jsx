@@ -164,12 +164,14 @@ function Expense() {
 					<div className="buttons">
 						{/* modal btn */}
 						<button
-							className="bg-green-500 text-white px-4 py-2 rounded mb-4 mr-4 hover:bg-green-700"
+							className="bg-green-500 text-white px-4 py-2 mb-4 mr-4 hover:bg-green-700"
+							style={{boxShadow: "0 2px 6px rgba(255, 255, 255, 0.7)"}}
 							onClick={modalIncome.openModal}>
 							Add Income
 						</button>
 						<button
-							className="bg-red-500 text-white px-4 py-2 rounded mb-4 mr-4 hover:bg-red-700"
+							className="bg-red-500 text-white px-4 py-2 mb-4 mr-4 hover:bg-red-700"
+							style={{boxShadow: "0 2px 6px rgba(255, 255, 255, 0.7)"}}
 							onClick={modalExpense.openModal}>
 							Add Expense
 						</button>
