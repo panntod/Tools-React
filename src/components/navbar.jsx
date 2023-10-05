@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/navbar.css";
 
-// halo aku asfina lucu
 const Navbar = () => {
   
   const removeNavbar = (event) => {
