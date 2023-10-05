@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-html{
+html {
   scroll-padding-top: 8rem;
 }
 
@@ -14,9 +14,6 @@ html{
   --main-color: #00abf0;
 }
 
-.home{
-    gap: 5rem;
-}
 
 .home-content {
   max-width: 600px;
@@ -27,10 +24,10 @@ html{
   font-size: 3rem;
 }
 
-.home-content p{
-    color: var(--text-color);
-    line-height: 2rem;
-    font-size: 1.2rem;
+.home-content p {
+  color: var(--text-color);
+  line-height: 2rem;
+  font-size: 1.2rem;
 }
 
 .img-container {
@@ -46,8 +43,30 @@ html{
   height: auto;
 }
 
-.section-header{
+.section-header {
   background: var(--second-bg-color);
   text-align: center;
   padding: 3rem;
+}
+
+@media (max-width: 657px) {
+  .home{
+    flex-direction: column-reverse;
+  }
+  .home-content {
+    padding: 1.6rem;
+  }
+  
+  .home-content h1 {
+    font-size: 2rem;
+  }
+  
+  .home-content p {
+    font-size: 1rem;
+  }
+  .img-container {
+    width: auto;
+    height: auto;
+    margin-bottom: 4rem;
+  }
 }

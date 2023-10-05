@@ -5,7 +5,7 @@ import "../css/home.css";
 const Home = () => {
   return (
     <>
-      <section className="container home">
+      <section className="container min-w-full home">
         <div className="home-content">
           <h1 className="text-2xl font-bold mb-4 text-black dark:text-white">About This Content</h1>
           <div>
@@ -27,7 +27,7 @@ const Home = () => {
           />
         </div>
       </section>
-      <h1 className="section-header text-5xl font-bold">Contact Me</h1>
+      <h1 className="font-semibold text-5xl p-8 w-full text-center" style={{background: "#112e42"}}> Contact Me</h1>
       <section className="contact" id="contact">
         <Contact />
       </section>

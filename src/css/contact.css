@@ -94,3 +94,16 @@
   .contact-sosmed a i:hover{
     transform: translateY(10px);
   }
+
+  @media (max-width: 658px) {
+    .contact-container{
+      margin-bottom: 7rem;
+      min-width: 90%;
+      padding: 2rem;
+      min-height: fit-content;
+    }
+    .form-shadow {
+      box-shadow:  none; /* Bayangan hanya di bagian kanan */
+    }
+    
+  }

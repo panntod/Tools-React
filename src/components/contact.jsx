@@ -88,7 +88,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="contact-container">
+      <div className="hidden sm:hidden md:flex contact-container">
         <div className="side-contact">
           <h1 className="side-text text-2xl font-semibold text-black">Let's Talk About Everything.</h1>
           <div className="contact-sosmed">
