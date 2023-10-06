@@ -27,7 +27,7 @@ const Home = () => {
           />
         </div>
       </section>
-      <h1 className="font-semibold text-5xl p-8 w-full text-center" style={{background: "#112e42"}}> Contact Me</h1>
+      <h1 className="font-semibold p-8 w-full text-center text-3xl sm:text-5xl" style={{background: "#112e42"}}> Contact Me</h1>
       <section className="contact" id="contact">
         <Contact />
       </section>

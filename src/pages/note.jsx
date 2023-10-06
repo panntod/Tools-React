@@ -28,14 +28,14 @@ function Note() {
 
   function getRandomColor() {
     const colors = [
-      "bg-pink",
-      "bg-purple",
-      "bg-blue",
-      "bg-green",
-      "bg-yellow",
-      "bg-red",
-      "bg-indigo",
-      "bg-gray",
+      "bg-pink-200",
+      "bg-purple-200",
+      "bg-blue-200",
+      "bg-green-200",
+      "bg-yellow-200",
+      "bg-red-200",
+      "bg-indigo-200",
+      "bg-gray-200",
     ];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
@@ -55,7 +55,7 @@ function Note() {
     setNotes([]);
   };
   return (
-    <div className="container" style={{ minHeight: "90vh" }}>
+    <div className="notes-wrapper" style={{ minHeight: "90vh"}}>
       <div className="note-container">
         <div className="notes">
           <h1 className="text-2xl font-bold mb-4">Notes</h1>
@@ -66,12 +66,12 @@ function Note() {
             clicking the red button below.
           </p>
           <div>
-            <button className="button bg-green" onClick={() => addNote()}>
+            <button className="button bg-green-500" onClick={() => addNote()}>
               <i className="fa fa-solid fa-plus button-font">
                 <p>New Note</p>
               </i>
             </button>
-            <button className="button bg-red" onClick={() => clearAll()}>
+            <button className="button bg-red-500" onClick={() => clearAll()}>
               <i className="fa fa-solid fa-trash button-font">
                 <p>Clear Notes</p>
               </i>

@@ -51,6 +51,7 @@ html {
 
 @media (max-width: 657px) {
   .home{
+    padding-top: 3rem;
     flex-direction: column-reverse;
   }
   .home-content {

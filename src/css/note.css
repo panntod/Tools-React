@@ -10,6 +10,17 @@
   --second-text-color: #8d8d8d;
   --main-color: #00abf0;
 }
+
+.notes-wrapper{
+  background: linear-gradient(to right bottom, var(--bg-color), var(--second-bg-color));
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
 .note-container {
   display: flex;
   padding: 4rem 0;
@@ -109,31 +120,15 @@ textarea::placeholder {
   font-size: 2em;
 }
 
-.bg-pink {
-  background-color: rgba(248, 113, 113, 1);
-}
-
-.bg-purple {
-  background-color: rgba(161, 116, 239, 1);
-}
-
-.bg-blue {
-  background-color: rgba(96, 165, 250, 1);
-}
-
-.bg-green {
-  background-color: rgba(125, 215, 120, 1);
-}
-
-.bg-yellow {
-  background-color: rgba(251, 191, 36, 1);
-}
-.bg-red {
-  background-color: rgba(239, 68, 68, 1);
-}
-.bg-indigo {
-  background-color: rgba(99, 102, 241, 1);
-}
-.bg-gray {
-  background-color: rgba(209, 213, 219, 1);
+@media (max-width:657px){
+  .note-wrapper{
+    min-width: 100%;
+  }
+  .textarea-notes {
+    padding: .4rem;
+    min-height: auto;
+    max-height: auto;
+    width: 20rem;
+    font-size: 1rem;
+  }
 }

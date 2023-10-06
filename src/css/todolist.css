@@ -17,7 +17,7 @@
   
   .container {
     background: linear-gradient(to right bottom, var(--bg-color), var(--second-bg-color));
-    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -130,3 +130,36 @@
     outline: none;
   }
   
+  @media (max-width: 657px) {
+    .todos_wrapper {
+      min-width: auto;
+      min-height: auto;
+      padding: 1rem;
+      margin: 2rem;
+    }
+    .task_input {
+      width: 240px;
+      padding: 10px;
+      margin: 0 10px 10px 0;
+      font-size: 16px;
+    }
+    .button_add {
+      padding: .4rem .8rem;
+      font-size: 16px;
+      width: 70px;
+    }
+    .list {
+      background-color: #12343b;
+      max-width: 180px;
+      font-size: 16px;
+      padding-left: 0;
+    }
+    .button-container{
+      margin-left: 10px;
+      width: auto;
+      height: auto;
+    }
+    .sm-none{
+      display: none;
+    }
+  }
