@@ -33,7 +33,6 @@ const Contact = () => {
           name="contact-form"
           className="px-m form-shadow"
         >
-          <input type="hidden" name="from" value="Todolist web"></input>
           <div className="form-group">
             <input
               type="text"
@@ -47,7 +46,7 @@ const Contact = () => {
           </div>
           <div className="form-group">
             <input
-              type="email"
+              type="text"
               className="form-control"
               name="email"
               id="email"
