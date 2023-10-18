@@ -283,6 +283,7 @@ function Expense() {
 						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
 						id="amount"
 						type="number"
+						min={0}
 						placeholder="Amount"
 						value={amount}
 						onChange={(e) => setAmount(e.target.value)}
@@ -333,6 +334,7 @@ function Expense() {
 						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
 						id="amount"
 						type="number"
+						min={0}
 						placeholder="Amount"
 						value={amount}
 						onChange={(e) => setAmount(e.target.value)}
@@ -385,6 +387,7 @@ function Expense() {
 						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
 						id="amount"
 						type="number"
+						min={0}
 						placeholder="Amount"
 						value={amount}
 						onChange={(e) => setAmount(e.target.value)}
