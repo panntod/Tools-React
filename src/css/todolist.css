@@ -1,138 +1,136 @@
+/* CSS default */
+
+.todos_wrapper {
+  background-color: #12343b;
+  width: 450px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 3px 6px 40px #000;
+  margin: 6rem 0 0 2rem;
+  border-radius: 10px;
+}
+
+.center h1 {
+  color: #fff;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.task_input {
+  outline: none;
+  width: 300px;
+  padding: 15px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #ccc;
+  background-color: #000;
+  border: 1px solid #c89666;
+  border-radius: 10px;
+}
+
+.button_add {
+  background-color: #f1af71;
+  box-shadow: 0 6px 12px black;
+  padding: 0.5rem 0.9rem;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  width: 70px;
+}
+
+.button_add:hover {
+  border: 1px solid #f1af71;
+  color: #f1af71;
+  background: black;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 60px;
+}
+
+.button_container {
+  display: flex;
+  justify-content: end;
+  width: 90px;
+}
+
+.button_icon {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 28px;
+  border-radius: 50%;
+}
+
+.button_complete {
+  color: #ff6c6c;
+  margin-right: 10px;
+}
+
+.button_edit {
+  color: #e2d029;
+  margin-right: 10px;
+}
+
+.button_trash {
+  color: lightseagreen;
+}
+
+.button_none {
+  display: none;
+}
+
+.complete {
+  text-decoration: solid;
+  text-decoration-line: line-through;
+  text-decoration-color: #ff6c6c;
+  opacity: 0.6;
+}
+
+.list {
+  width: 260px;
+  background-color: #12343b;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  padding-left: 1rem;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
   .todos_wrapper {
-    background-color: #12343b;
-    min-width: 450px;
-    min-height: 650px;
-    padding: 30px;
-    box-sizing: border-box;
-    box-shadow: 3px 6px 40px #000;
-    margin: 6rem 0 0 2rem;
-    border-radius: 10px;
-  }
-  
-  .center h1 {
-    color: #fff;
-    text-align: center;
-    margin: 30px 0;
-  }
-  
-  .task_input {
-    outline: none;
-    width: 300px;
-    padding: 15px;
-    margin-right: 20px;
-    font-size: 20px;
-    color: #ccc;
-    background-color: #000;
-    border: 1px solid #c89666;
-    border-radius: 10px;
-  }
-  
-  .button_add {
-    background-color: #f1af71;
-    box-shadow: 0 6px 12px black;
-    padding: .5rem .9rem;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    width: 70px;
+    width: 380px;
+    min-height: auto;
+    margin: 2rem auto;
   }
 
-  .button_add:hover{
-    border: 1px solid #f1af71;
-    color: #f1af71;
-    background: black;
+  .button_add {
+    margin-top: 1rem;
+    width: 100%;
   }
-  
-  .list_item {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 5px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    max-height: 60px;
+
+  .task_input {
+    width: 100%;
+    margin-right: 0;
   }
-  
-  .button_complete,
-  .button_delete,
-  .button_edit {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 28px;
-    border-radius: 50%;
-  }
-  
-  .button_complete {
-    color: #ff6c6c;
-    margin-right: 10px;
-  }
-  
-  .button_edit {
-    color: #e2d029;
-    margin-right: 10px;
-  }
-  
-  .button_delete {
-    color: lightseagreen;
-  }
-  
-  .button_none {
-    display: none;
-  }
-  
-  .complete {
-    text-decoration: solid;
-    text-decoration-line: line-through;
-    text-decoration-color: #ff6c6c;
-    opacity: 0.6;
-  }
-  
+
   .list {
-    width: 260px;
-    background-color: #12343b;
-    border: none;
-    color: #ccc;
+    width: 180px;
+  }
+
+  .button_icon {
     font-size: 20px;
-    padding-left: 1rem;
   }
-  
-  input:focus,
-  button:focus {
-    outline: none;
-  }
-  
-  @media (max-width: 657px) {
-    .todos_wrapper {
-      min-width: auto;
-      min-height: auto;
-      padding: 1rem;
-      margin: 2rem;
-    }
-    .task_input {
-      width: 240px;
-      padding: 10px;
-      margin: 0 10px 10px 0;
-      font-size: 16px;
-    }
-    .button_add {
-      padding: .4rem .8rem;
-      font-size: 16px;
-      width: 70px;
-    }
-    .list {
-      background-color: #12343b;
-      max-width: 180px;
-      font-size: 16px;
-      padding-left: 0;
-    }
-    .button-container{
-      margin-left: 10px;
-      width: auto;
-      height: auto;
-    }
-    .sm-none{
-      display: none;
-    }
-  }
+}
