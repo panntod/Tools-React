@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/navbar.css";
 
 function NavItem({ href, text }) {
   return (
