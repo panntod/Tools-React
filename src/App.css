@@ -1,3 +1,38 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+
+html {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  background: linear-gradient(
+    to right bottom,
+    var(--bg-color),
+    var(--second-bg-color)
+  );
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.mobile-hidden{
+  display: none;
+}

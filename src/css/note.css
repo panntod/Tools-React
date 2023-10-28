@@ -1,16 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --bg-color: #081b29;
-  --second-bg-color: #112e42;
-  --text-color: #ededed;
-  --second-text-color: #8d8d8d;
-  --main-color: #00abf0;
-}
-
 .notes-wrapper{
   background: linear-gradient(to right bottom, var(--bg-color), var(--second-bg-color));
   min-width: 100%;
