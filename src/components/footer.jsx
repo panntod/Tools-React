@@ -19,7 +19,7 @@ const Footer = () => {
           <i class="fa fa-facebook"></i>
         </a>
       </div>
-      <a href="panntod.github.io" className="font-semibold">Back To Portfolio <i className="fa fa-arrow-right"></i></a>
+      <a href="https://panntod.github.io/" className="font-semibold my-4">Back To Portfolio <i className="fa fa-arrow-right"></i></a>
       <p class="footer-copy">&copy; 2023 Pandhu Arya</p>
     </footer>
   );
