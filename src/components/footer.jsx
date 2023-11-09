@@ -2,25 +2,25 @@ import React from "react";
 import "../css/footer.css"
 const Footer = () => {
   return (
-    <footer class="footer">
-      <p class="footer-title">Based In</p>
-      <p class="footer-subtitle">Malang, Jawa Timur, Indonesia</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/pandhuu._" class="sosmed-icon">
-          <i class="fa fa-instagram"></i>
+    <footer className="footer">
+      <p className="footer-title">Based In</p>
+      <p className="footer-subtitle">Malang, Jawa Timur, Indonesia</p>
+      <div className="footer-social">
+        <a href="https://www.instagram.com/pandhuu._" className="sosmed-icon">
+          <i className="fa fa-instagram"></i>
         </a>
-        <a href="https://github.com/panntod" class="sosmed-icon">
-          <i class="fa fa-github"></i>
+        <a href="https://github.com/panntod" className="sosmed-icon">
+          <i className="fa fa-github"></i>
         </a>
         <a
           href="https://www.facebook.com/pandhu.munjalindra"
-          class="sosmed-icon"
+          className="sosmed-icon"
         >
-          <i class="fa fa-facebook"></i>
+          <i className="fa fa-facebook"></i>
         </a>
       </div>
       <a href="https://panntod.github.io/" className="font-semibold my-4">Back To Portfolio <i className="fa fa-arrow-right"></i></a>
-      <p class="footer-copy">&copy; 2023 Pandhu Arya</p>
+      <p className="footer-copy">&copy; 2023 Pandhu Arya</p>
     </footer>
   );
 };
