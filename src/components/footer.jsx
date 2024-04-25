@@ -19,7 +19,6 @@ const Footer = () => {
           <i className="fa fa-facebook"></i>
         </a>
       </div>
-      <a href="https://panntod.github.io/" className="font-semibold my-4">Back To Portfolio <i className="fa fa-arrow-right"></i></a>
       <p className="footer-copy">&copy; 2023 Pandhu Arya</p>
     </footer>
   );
