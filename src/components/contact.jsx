@@ -40,7 +40,7 @@ const Contact = () => {
               name="name"
               id="name"
               placeholder="Name"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
           </div>
@@ -51,7 +51,7 @@ const Contact = () => {
               name="email"
               id="email"
               placeholder="Email"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
           </div>
@@ -63,7 +63,7 @@ const Contact = () => {
               name="subject"
               id="subject"
               placeholder="Subject"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
           </div>
@@ -75,7 +75,7 @@ const Contact = () => {
               cols="30"
               rows="7"
               placeholder="Message"
-              autocomplete="off"
+              autoComplete="off"
               required
             ></textarea>
           </div>
