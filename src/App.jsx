@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/home";
@@ -19,7 +19,8 @@ const App = () => {
         <Route path="/notes" element={<Note />} />
         <Route path="/expenses" element={<Expense />} />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="/not-found" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/not-found" replace />} />
       </Routes>
       <Footer />
     </Router>
