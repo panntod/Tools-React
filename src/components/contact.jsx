@@ -37,7 +37,7 @@ const Contact = () => {
           onSubmit={(e) => handleSubmitForm(e)}
           id="contact-form"
           name="contact-form"
-          className="pr-12 border-r md:border-r-black"
+          className="pr-4 md:pr-12 md:border-r md:border-r-black"
         >
           <div className="form-group">
             <input
