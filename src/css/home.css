@@ -24,6 +24,13 @@
 .img-container img {
   width: 250px;
   height: auto;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 .section-header {
