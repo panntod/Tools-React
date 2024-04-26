@@ -89,7 +89,11 @@ function Note() {
             <h1 className="text-2xl font-bold mb-4">Note List</h1>
           </div>
           {notes.length === 0 ? (
-            <p className="notes">Tidak ada data</p>
+            <div className="w-full mb-8 bg-slate-300 rounded-md pt-5 pb-4 dark:bg-gray-600">
+              <p className="text-black dark:text-white text-center">
+                Tidak Ada Data
+              </p>
+            </div>
           ) : (
             <div>
               {notes.map((note, index) => (

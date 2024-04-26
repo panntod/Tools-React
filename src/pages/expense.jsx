@@ -33,8 +33,7 @@ function Expense() {
 
   const addExpense = (e) => {
     e.preventDefault();
-    let category
-    ;
+    let category;
     if (modalIncome.isOpen) {
       category = "income";
     } else if (modalExpense.isOpen) {
@@ -132,19 +131,18 @@ function Expense() {
 
   return (
     <div
-      className="p-4 pt-28"
+      className="p-4 pt-28 min-h-screen"
       style={{
-        minHeight: "100vh",
         background: "linear-gradient(to right bottom, #081b29, #112e42)",
       }}
     >
       <div className="mx-auto px-0 min-h-full min-w-full grid grid-cols-1 md:grid-cols-2">
-        <div className="flex justify-start flex-col items-center min-w-full px-4 md:px-24">
+        <div className="flex justify-start flex-col items-center min-w-full px-4 md:px-24 mb-12">
           <h1 className="text-2xl font-bold mb-4 text-black dark:text-white">
             Expense Tracker
           </h1>
           {/* total balance */}
-          <div className="flex justify-center items-center w-full mb-8  bg-slate-300 rounded-md pt-5 pb-4 dark:bg-gray-600 px-3">
+          <div className="flex justify-center items-center w-full mb-8 bg-slate-300 rounded-md pt-5 pb-4 dark:bg-gray-600 px-3">
             <div className="flex flex-col justify-center items-center min-w-full text-black dark:text-white">
               <span className="text-sm">Your Balance</span>
               <span className="text-2xl font-bold">
@@ -170,14 +168,12 @@ function Expense() {
             {/* modal btn */}
             <button
               className="bg-green-400 text-white px-4 py-2 rounded-md hover:bg-green-600"
-              style={{ boxShadow: "0 2px 6px rgba(255, 255, 255, 0.7)" }}
               onClick={modalIncome.openModal}
             >
               Add Income
             </button>
             <button
               className="bg-red-400 text-white px-4 py-2 rounded-md hover:bg-red-600"
-              style={{ boxShadow: "0 2px 6px rgba(255, 255, 255, 0.7)" }}
               onClick={modalExpense.openModal}
             >
               Add Expense
@@ -193,7 +189,9 @@ function Expense() {
             </h1>
           </div>
           {expenses.length === 0 ? (
-            <p className="text-black dark:text-white">Tidak ada data</p>
+            <div className="w-2/3 mb-8 bg-slate-300 rounded-md pt-5 pb-4 dark:bg-gray-600">
+              <p className="text-black dark:text-white text-center">Tidak Ada Data</p>
+            </div>
           ) : (
             <ul className="overlow-container min-w-full pl-4 pr-0 md:pl-10 overflow-y-scroll max-h-[40rem] md:max-h-[45rem]">
               {expenses
@@ -385,7 +383,7 @@ function Expense() {
           />
         </div>
       </Modal>
-      
+
       <Modal
         show={modalEdit.isOpen}
         title="Edit Expense"
