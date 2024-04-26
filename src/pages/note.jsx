@@ -43,19 +43,21 @@ function Note() {
   function adjustTextareaHeight(event, index) {
     const textarea = event.target;
     textarea.style.height = "auto";
-    const computedHeight = Math.min(textarea.scrollHeight, 300); // Limit to 300px
+    const computedHeight = Math.min(textarea.scrollHeight, 300);
     textarea.style.height = `${computedHeight}px`;
 
     const updatedNotes = [...notes];
     updatedNotes[index].text = textarea.value;
     setNotes(updatedNotes);
   }
+
   // clear all notes
   const clearAll = () => {
     setNotes([]);
   };
+
   return (
-    <div className="notes-wrapper" style={{ minHeight: "90vh"}}>
+    <div className="notes-wrapper min-h-screen">
       <div className="note-container">
         <div className="notes">
           <h1 className="text-2xl font-bold mb-4">Notes</h1>
@@ -65,13 +67,13 @@ function Note() {
             clicking the trash icon in each note or just clear all the notes by
             clicking the red button below.
           </p>
-          <div>
-            <button className="button bg-green-500" onClick={() => addNote()}>
+          <div className="flex justify-center mt-4 gap-4">
+            <button className="bg-green-400 text-white px-6 py-3 rounded-md hover:bg-green-600" onClick={() => addNote()}>
               <i className="fa fa-solid fa-plus button-font">
                 <p>New Note</p>
               </i>
             </button>
-            <button className="button bg-red-500" onClick={() => clearAll()}>
+            <button className="bg-red-400 text-white px-6 py-3 rounded-md hover:bg-red-600" onClick={() => clearAll()}>
               <i className="fa fa-solid fa-trash button-font">
                 <p>Clear Notes</p>
               </i>
@@ -101,7 +103,7 @@ function Note() {
                       placeholder="Write your note here..."
                     ></textarea>
                     <div>
-                      <button onClick={() => deleteNote(index)} className="button-delete-note">
+                      <button onClick={() => deleteNote(index)} className="ms-4 bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-3 rounded">
                         <i className="fa fa-solid fa-trash"></i>
                       </button>
                     </div>
