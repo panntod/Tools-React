@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 import "../css/note.css";
 
@@ -68,15 +68,19 @@ function Note() {
             clicking the red button below.
           </p>
           <div className="flex justify-center mt-4 gap-4">
-            <button className="bg-green-400 text-white px-6 py-3 rounded-md hover:bg-green-600" onClick={() => addNote()}>
-              <i className="fa fa-solid fa-plus button-font">
-                <p>New Note</p>
-              </i>
+            <button
+              className="bg-green-400 text-white px-6 py-3 rounded-md flex justify-center items-center gap-2 hover:bg-green-600"
+              onClick={() => addNote()}
+            >
+              <i className="fa fa-solid fa-plus"></i>
+              <p>New Note</p>
             </button>
-            <button className="bg-red-400 text-white px-6 py-3 rounded-md hover:bg-red-600" onClick={() => clearAll()}>
-              <i className="fa fa-solid fa-trash button-font">
-                <p>Clear Notes</p>
-              </i>
+            <button
+              className="bg-red-400 text-white px-6 py-3 rounded-md flex justify-center items-center gap-2 hover:bg-red-600"
+              onClick={() => clearAll()}
+            >
+              <i className="fa fa-solid fa-trash"></i>
+              <p>Clear Notes</p>
             </button>
           </div>
         </div>
@@ -89,7 +93,15 @@ function Note() {
           ) : (
             <div>
               {notes.map((note, index) => (
-                <div key={index} className={`${note.color} `} style={{borderRadius: 6+"px", padding: .4+"rem", marginBottom: 10+"px"}}>
+                <div
+                  key={index}
+                  className={`${note.color} `}
+                  style={{
+                    borderRadius: 6 + "px",
+                    padding: 0.4 + "rem",
+                    marginBottom: 10 + "px",
+                  }}
+                >
                   <div className="form-note">
                     <textarea
                       value={note.text}
@@ -103,7 +115,10 @@ function Note() {
                       placeholder="Write your note here..."
                     ></textarea>
                     <div>
-                      <button onClick={() => deleteNote(index)} className="ms-4 bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-3 rounded">
+                      <button
+                        onClick={() => deleteNote(index)}
+                        className="ms-4 bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-3 rounded"
+                      >
                         <i className="fa fa-solid fa-trash"></i>
                       </button>
                     </div>
