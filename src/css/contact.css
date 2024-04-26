@@ -8,50 +8,25 @@
 
 .contact-container {
   margin-bottom: 7rem;
-  background: var(--text-color);
+  background: #f5f5f5;
   padding: 2rem;
   min-height: 40rem;
 }
 
 .section-title {
   font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.px-m {
-  padding: 0 3rem 0 0;
-}
-
-.form-group {
-  padding: 0.4rem 0;
-}
-
 .form-control {
-  background: transparent;
+  background: #f5f5f5;
   font-size: 1.1rem;
   border: none;
-  border-bottom: 1px solid gray;
-  padding: 0.2rem;
+  border-bottom: 1px solid #808080;
+  margin: 4px 0;
+  padding: 0.3rem;
   width: 100%;
-}
-
-.form-shadow {
-  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.6);
-}
-
-.contact-btn {
-  color: white;
-  background: var(--main-color);
-  padding: 0.8rem;
-  border: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-}
-
-.contact-btn:hover {
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
-  background: white;
-  cursor: pointer;
 }
 
 .side-contact {
@@ -62,35 +37,11 @@
   max-width: 13rem;
 }
 
-.side-text h1 {
-  color: #000;
-}
-
-.contact-sosmed {
-  width: 100%;
-  gap: 10px;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact-sosmed a i {
-  font-size: 2rem;
-  color: var(--main-color);
-}
-
-.contact-sosmed a i:hover {
-  transform: translateY(10px);
-}
-
 @media (max-width: 658px) {
   .contact-container {
     margin-bottom: 7rem;
     min-width: 90%;
     padding: 2rem;
     min-height: fit-content;
-  }
-  .form-shadow {
-    box-shadow: none; /* Bayangan hanya di bagian kanan */
   }
 }

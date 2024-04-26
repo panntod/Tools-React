@@ -1,25 +1,31 @@
-import React, { useEffect } from "react";
+import { useState } from "react";
 import "../css/contact.css";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbxGfA8DJox2zVLcD4JAi5bc9KGMz41oqvxg552--CFf8K9YkbiczLDjQhSW9877zRMBlg/exec";
 
-  useEffect(() => {
+  const handleSubmitForm = async (e) => {
+    e.preventDefault();
     const form = document.forms["contact-form"];
+    setLoading(true);
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      fetch(scriptURL, { method: "POST", body: new FormData(form) })
-        .then((response) => {
-          alert("Message Succesfully Send!");
-          form.reset();
-          console.log("Success!", response);
-        })
-        .catch((error) => console.error("Error!", error.message));
-    });
-  }, []);
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      });
+      if (response.ok) {
+        alert("Message Succesfully Send!");
+        form.reset();
+      } else {
+        alert("Something went wrong");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -28,10 +34,10 @@ const Contact = () => {
           Fill The Form. <br /> It's Easy.
         </h2>
         <form
-          method="post"
+          onSubmit={(e) => handleSubmitForm(e)}
           id="contact-form"
           name="contact-form"
-          className="px-m form-shadow"
+          className="pr-12 border-r md:border-r-black"
         >
           <div className="form-group">
             <input
@@ -55,7 +61,6 @@ const Contact = () => {
               required
             />
           </div>
-
           <div className="form-group">
             <input
               type="text"
@@ -70,7 +75,7 @@ const Contact = () => {
           <div className="form-group">
             <textarea
               name="message"
-              className="form-control"
+              className="form-control focus:outline-none"
               id="message"
               cols="30"
               rows="7"
@@ -79,31 +84,50 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-          <div className="form-group">
-            <button type="submit" className="contact-btn">
-              Send Message
-            </button>
-          </div>
+          <button
+            type="submit"
+            className={`mt-4 w-36 h-12 bg-blue-500 hover:bg-blue-300 rounded-full ${
+              loading ? "bg-blue-300" : ""
+            }`}
+            disabled={loading}
+          >
+            <span className="text-white whitespace-nowrap font-semibold">
+              {loading ? "Loading..." : "Send Message"}
+            </span>
+          </button>
         </form>
       </div>
 
       <div className="hidden sm:hidden md:flex contact-container">
         <div className="side-contact">
-          <h1 className="side-text text-2xl font-semibold text-black">Let's Talk About Everything.</h1>
-          <div className="contact-sosmed">
-            <a href="https://www.facebook.com/pandhu.munjalindra" >
+          <h1 className="text-2xl font-semibold text-black mb-4">
+            Let's Talk About Everything.
+          </h1>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://www.facebook.com/pandhu.munjalindra"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 hover:shadow-md hover:text-blue-500"
+            >
               <i className="fa fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/pandhuu._/">
+            <a
+              href="https://www.instagram.com/pandhuu._/"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 hover:shadow-md hover:text-blue-500"
+            >
               <i className="fa fa-instagram"></i>
             </a>
-            <a href="github.com/panntod">
+            <a
+              href="github.com/panntod"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 hover:shadow-md hover:text-blue-500"
+            >
               <i className="fa fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/pandhu-arya-munjalindra-b9834b294">
+            <a
+              href="https://www.linkedin.com/in/pandhu-arya-munjalindra-b9834b294"
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 hover:shadow-md hover:text-blue-500"
+            >
               <i className="fa fa-linkedin"></i>
             </a>
-            
           </div>
         </div>
       </div>
