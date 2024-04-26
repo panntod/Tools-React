@@ -5,13 +5,13 @@ import useModal from "../components/useModal";
 
 function Expense() {
   const [total, setTotal] = useState(0);
-  const [expenses, setExpenses] = useState(
-    JSON.parse(localStorage.getItem("expenses")) || []
-  );
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [index, setIndex] = useState(null);
+  const [expenses, setExpenses] = useState(
+    JSON.parse(localStorage.getItem("expenses")) || []
+  );
 
   // save to local storage
   useEffect(() => {
@@ -33,7 +33,8 @@ function Expense() {
 
   const addExpense = (e) => {
     e.preventDefault();
-    let category = "";
+    let category
+    ;
     if (modalIncome.isOpen) {
       category = "income";
     } else if (modalExpense.isOpen) {
@@ -49,6 +50,7 @@ function Expense() {
         category: category,
       },
     ]);
+
     setAmount("");
     setDescription("");
     setDate("");
@@ -64,6 +66,7 @@ function Expense() {
 
   const editExpense = (e, index) => {
     e.preventDefault();
+
     if (index !== null) {
       const newExpenses = [...expenses];
       const prevAmount = parseInt(expenses[index].amount);
@@ -163,17 +166,17 @@ function Expense() {
               </div>
             </div>
           </div>
-          <div className="buttons">
+          <div className="flex gap-4">
             {/* modal btn */}
             <button
-              className="bg-green-500 text-white px-4 py-2 mb-4 mr-4 hover:bg-green-700"
+              className="bg-green-400 text-white px-4 py-2 rounded-md hover:bg-green-600"
               style={{ boxShadow: "0 2px 6px rgba(255, 255, 255, 0.7)" }}
               onClick={modalIncome.openModal}
             >
               Add Income
             </button>
             <button
-              className="bg-red-500 text-white px-4 py-2 mb-4 mr-4 hover:bg-red-700"
+              className="bg-red-400 text-white px-4 py-2 rounded-md hover:bg-red-600"
               style={{ boxShadow: "0 2px 6px rgba(255, 255, 255, 0.7)" }}
               onClick={modalExpense.openModal}
             >
@@ -238,7 +241,7 @@ function Expense() {
                           {expense.description}
                         </span>
 
-                        <div className="buttons flex flex-col md:flex-row justify-center items-end">
+                        <div className="flex flex-col md:flex-row justify-center items-end">
                           <button
                             onClick={() => {
                               modalEdit.openModal();
@@ -247,14 +250,14 @@ function Expense() {
                               setDescription(expense.description);
                               setDate(expense.date);
                             }}
-                            className="bg-yellow-400 hover:bg-green-700 text-white font-bold py-2 px-3 rounded  mr-0 md:mr-2"
+                            className="bg-yellow-400 hover:bg-yellow-600 text-white font-bold py-2 px-3 rounded  mr-0 md:mr-2"
                           >
                             <i className="fa fa-solid fa-pencil"></i>
                           </button>
 
                           <button
                             onClick={() => deleteExpense(index)}
-                            className="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-3 rounded"
+                            className="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-3 rounded"
                           >
                             <i className="fa fa-solid fa-trash"></i>
                           </button>
@@ -324,6 +327,7 @@ function Expense() {
           />
         </div>
       </Modal>
+
       <Modal
         show={modalExpense.isOpen}
         title="Add Expense"
@@ -381,6 +385,7 @@ function Expense() {
           />
         </div>
       </Modal>
+      
       <Modal
         show={modalEdit.isOpen}
         title="Edit Expense"
