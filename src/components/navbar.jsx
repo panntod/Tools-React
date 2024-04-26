@@ -70,6 +70,7 @@ const Navbar = () => {
                 <Link
                   key={navOption.title}
                   to={navOption.href}
+                  onClick={() => setIsOpen(!isOpen)}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     location.pathname === navOption.href
                       ? "text-white bg-gray-900"
