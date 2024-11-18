@@ -31,14 +31,31 @@ function Expense() {
     setTotal(total);
   }, [expenses]);
 
+  const handleCloseModal = () => {
+    setAmount("");
+    setDescription("");
+    setDate("");
+    if (modalIncome.isOpen) {
+      modalIncome.closeModal();
+    } else if (modalExpense.isOpen) {
+      modalExpense.closeModal();
+    } else {
+      modalEdit.closeModal();
+    }
+  };
+
   const addExpense = (e) => {
     e.preventDefault();
+
     let category;
     if (modalIncome.isOpen) {
       category = "income";
     } else if (modalExpense.isOpen) {
       category = "expense";
+    } else {
+      return;
     }
+
     setExpenses([
       ...expenses,
       {
@@ -50,17 +67,13 @@ function Expense() {
       },
     ]);
 
-    setAmount("");
-    setDescription("");
-    setDate("");
-
     if (modalIncome.isOpen) {
       setTotal(total + parseInt(amount));
-      modalIncome.closeModal();
     } else if (modalExpense.isOpen) {
       setTotal(total - parseInt(amount));
-      modalExpense.closeModal();
     }
+
+    handleCloseModal();
   };
 
   const editExpense = (e, index) => {
@@ -87,11 +100,7 @@ function Expense() {
         setTotal((prevTotal) => prevTotal - parseInt(amount));
       }
 
-      setAmount("");
-      setDescription("");
-      setDate("");
-      setIndex(null);
-      modalEdit.closeModal();
+      handleCloseModal();
       return;
     }
   };
@@ -190,7 +199,9 @@ function Expense() {
           </div>
           {expenses.length === 0 ? (
             <div className="w-2/3 mb-8 bg-slate-300 rounded-md pt-5 pb-4 dark:bg-gray-600">
-              <p className="text-black dark:text-white text-center">Tidak Ada Data</p>
+              <p className="text-black dark:text-white text-center">
+                Tidak Ada Data
+              </p>
             </div>
           ) : (
             <ul className="overlow-container min-w-full pl-4 pr-0 md:pl-10 overflow-y-scroll max-h-[40rem] md:max-h-[45rem]">
@@ -274,7 +285,7 @@ function Expense() {
         show={modalIncome.isOpen}
         title="Add Income"
         handleSubmit={addExpense}
-        handleClose={modalIncome.closeModal}
+        handleClose={handleCloseModal}
       >
         <div className="mb-4">
           <label
@@ -330,7 +341,7 @@ function Expense() {
         show={modalExpense.isOpen}
         title="Add Expense"
         handleSubmit={addExpense}
-        handleClose={modalExpense.closeModal}
+        handleClose={handleCloseModal}
       >
         <div className="mb-4">
           <label
